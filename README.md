@@ -18,7 +18,7 @@ This project implements a Doctor Appointment Booking Assistant using langchain a
 ## Installation
 
 1. Clone the repository:
-git clone https://github.com/yourusername/ai-appointment-assistant.git
+git clone [Using Link](https://github.com/JoshiSneh/doctor-booking-assistant).git
 cd ai-appointment-assistant
 Copy
 2. Install the required packages:
