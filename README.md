@@ -15,19 +15,24 @@ This project implements a Doctor Appointment Booking Assistant using langchain a
 - Information extraction and validation
 - JSON output formatting
 
+## Requirements
+
+- Python 3.7+
+- `langchain_groq`
+- `langchain`
+- `python-dotenv`
+
 ## Installation
 
 1. Clone the repository:
 git clone https://github.com/JoshiSneh/doctor-booking-assistant.git
-cd ai-appointment-assistant
-Copy
+cd doctor-booking-assistant
 2. Install the required packages:
 pip install -r requirements.txt
-Copy
 3. Set up your environment variables:
 Create a `.env` file in the project root and add your Groq API key:
 GROQ_API_KEY=your_groq_api_key_here
-Copy
+
 ## Usage
 
 Run the main script to start the appointment booking assistant:
