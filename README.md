@@ -10,7 +10,6 @@ This project implements a Doctor Appointment Booking Assistant using langchain a
 - Extraction and validation of appointment details
 - Confirmation and summary of booked appointments
 - Natural language processing for appointment booking
-- Flexible model selection (Gemma2 or Mixtral)
 - Conversation memory to maintain context
 - Information extraction and validation
 - JSON output formatting
