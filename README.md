@@ -38,6 +38,7 @@ Run the main script to start the appointment booking assistant:
 python appointment_assistant.py
 Copy
 Follow the prompts to book an appointment. The assistant will guide you through the process, asking for the doctor's name, appointment start time, and end time.
+At last to close the assistant we have to write `bye` to exit the application.
 
 ## Code Structure
 
