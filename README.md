@@ -4,6 +4,11 @@
 
 This project implements a Doctor Appointment Booking Assistant using langchain and the Groq API. The assistant helps users schedule doctor appointments by collecting necessary information through a conversational interface.
 
+## Sample Working of the Assistant
+![Screenshot 2024-07-23 090457](https://github.com/user-attachments/assets/5cf6e52e-640c-494a-bc95-4a3cb4b1f6f4)
+![Screenshot 2024-07-23 090546](https://github.com/user-attachments/assets/ae3cfb4f-634f-447d-8c72-65c691a1602c)
+![Screenshot 2024-07-23 090716](https://github.com/user-attachments/assets/d2033c39-502f-4995-92e7-dbafdabada7a)
+
 ## Features
 
 - Integration with Groq API for natural language processing
