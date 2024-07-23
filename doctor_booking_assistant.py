@@ -154,7 +154,7 @@ def process_booking(chain):
     print("Is this information correct? (Yes/No)")
     
     if input("Human: ").lower() == "yes":
-        print("Your appointment has been booked. Is there anything else I can help you with?")
+        print(""Your appointment has been booked. Thank you for choosing us!")
         return True
     else:
         print("I apologize for the mistake. Let's start over. What would you like to change?")
