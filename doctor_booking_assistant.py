@@ -73,7 +73,6 @@ Assistant > Sure, I can help you with that, can you provide the date, time and t
 doctor you wanted to book the appointment for?
 User > I want to book for tomorrow 8 AM to 9 AM for Dr. John Doe
 Assistant > {{
-
 "drName": "Dr. John Doe",
 "startDate": "2024-11-01T08:00:00Z",
 "endDate": "2024-01-11T09:00:00Z"
@@ -81,7 +80,6 @@ Assistant > {{
 Example 2:
 User > Create appointment for Dr. John Doe from 8 am to 9 am on Tuesday
 Assistant > {{
-
 "drName": "Dr. John Doe",
 "startDate": "2024-11-16T08:00:00Z",
 "endDate": "2024-01-11T16:00:00Z"
@@ -158,7 +156,7 @@ def process_booking(chain):
         return True
     else:
         print("I apologize for the mistake. Let's start over. What would you like to change?")
-        return False
+        return True
 
 def main():
     print("AI: Hello! I'm here to help you book a doctor's appointment. How can I assist you today?")
