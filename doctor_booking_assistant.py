@@ -21,6 +21,9 @@ groq_api_key = os.getenv('GROQ_API_KEY')
 llm = ChatGroq(groq_api_key=groq_api_key, model_name="gemma2-9b-it")
 '''Using the Mixtral model for the ChatGroq'''
 # llm = ChatGroq(groq_api_key=groq_api_key, model_name="mixtral-8x7b-32768")
+'''Using the Mixtral model for the ChatGroq'''
+# llm = ChatGroq(groq_api_key=groq_api_key, model_name="llama-3.1-70b-versatile")
+
 
 
 '''System message template for the appointment booking assistant'''
@@ -89,8 +92,6 @@ Assistant > {{
 Always ensure the output JSON is properly formatted and follows the same structure.
 
 To minimize token usage, keep responses concise and focused on the task at hand.
-
-Respond with just 'Thank you for choosing us' at the end. Do not ask for feedback or additional information.
 {chat_history}
 Human: {query}
 AI:
@@ -142,17 +143,17 @@ def process_booking(chain):
             return False
 
         response = chain.run(query)
-        print(response)
+        print("Assistant: ",response)
 
         extracted_info = extract_appointment_info(response)
         appointment_info.update({k: v for k, v in extracted_info.items() if v is not None})
 
     print("Great! I've collected all the necessary information. Here's a summary of your appointment:")
-    print(appointment_info)
+    print(response)
     print("Is this information correct? (Yes/No)")
     
     if input("Human: ").lower() == "yes":
-        print(""Your appointment has been booked. Thank you for choosing us!")
+        print("Your appointment has been booked. Thank you for choosing us!")
         return True
     else:
         print("I apologize for the mistake. Let's start over. What would you like to change?")
@@ -169,11 +170,10 @@ def main():
             break
 
         response = chain.run(query)
-        print(response)
+        print("Assistant: ",response)
 
         if "book" in query.lower() or "appointment" in query.lower():
-            if process_booking(chain):
-                continue
-
+            if process_booking(chain) or not process_booking(chain):
+                break
 if __name__ == "__main__":
     main()
