@@ -171,7 +171,7 @@ def main():
         response = chain.run(query)
         print(response)
 
-        if "book" in query.lower() and "appointment" in query.lower():
+        if "book" in query.lower() or "appointment" in query.lower():
             if process_booking(chain):
                 continue
 
